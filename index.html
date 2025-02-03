@@ -41,7 +41,6 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('file-content').textContent = data;
-                adjustFontSize();
             })
             .catch(error => {
                 document.getElementById('file-content').textContent = '파일을 읽는 중 오류가 발생했습니다.';
