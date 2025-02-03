@@ -23,8 +23,22 @@
 <body>
     <div class="container">
         <h1>Observation data</h1>
-        <p>obserbation</p>
-        <p>test</p>
+        <p>Observation:</p>
+        <pre id="file-content">Loading...</pre>
     </div>
+
+    <script>
+        const fileUrl = 'https://raw.githubusercontent.com/ojhsos/ojhsos.github.io/refs/heads/main/table.txt';
+        
+        fetch(fileUrl)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('file-content').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('file-content').textContent = '파일을 읽는 중 오류가 발생했습니다.';
+                console.error('Error fetching the file:', error);
+            });
+    </script>
 </body>
 </html>
