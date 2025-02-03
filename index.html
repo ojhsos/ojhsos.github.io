@@ -17,10 +17,14 @@
         #file-content {
             font-family: Consolas, monospace;
             line-height: 0.9;
-            width: fit-content;
+            width: 100%; /* 화면 크기에 맞게 너비를 100%로 설정 */
+            max-width: 100%; /* 최대 너비를 100%로 설정하여 화면을 넘지 않도록 */
+            word-wrap: break-word; /* 긴 단어는 자동으로 줄 바꿈 */
+            overflow-wrap: break-word; /* 줄 바꿈 처리 */
+            white-space: pre-wrap; /* 공백을 유지하면서 줄 바꿈 */
         }
         .container {
-            width: fit-content;
+            width: 100%; /* 부모 요소 너비를 100%로 설정 */
             margin: auto;
             text-align: left;
             padding: 20px;
@@ -28,6 +32,7 @@
         }
         a {
             text-align: center;
+            margin: 0 10px; /* 링크 사이 간격 추가 */
         }
     </style>
 </head>
@@ -35,7 +40,6 @@
     <h1>Jaehyun Oh Astrophotography</h1>
     <div class="container">
         <a href="https://www.instagram.com/jaehyun_oh_9824/">Instagram</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.flickr.com/photos/oh-space/">Flickr</a>
         <p>Observation Data:</p>
         <pre id="file-content">Loading...</pre>
