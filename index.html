@@ -9,17 +9,18 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.0;
+            color: #FFF8E7;
             text-align: center;
             margin: 0 auto;
             padding: 20px 0;
-            background-color: white;
+            background-color: black;
         }
         .container {
             width: fit-content;
             max-width: 100%;
             margin: 0 auto;
             padding: 20px 0;
-            background: white;
+            background: black;
         }
         #file-content {
             font-family: Consolas, monospace;
@@ -34,7 +35,7 @@
         <a href="https://www.instagram.com/jaehyun_oh_9824/">Instagram</a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://www.flickr.com/photos/oh-space/">Flickr</a>
         <p>Observation Date</p>
-        <pre id="file-content">Loading...</pre>
+        <pre id="file-content">LOADING...</pre>
     </div>
     <script>
         const fileUrl = 'https://raw.githubusercontent.com/ojhsos/ojhsos.github.io/refs/heads/main/table.txt';
@@ -44,7 +45,7 @@
                 document.getElementById('file-content').textContent = data;
             })
             .catch(error => {
-                document.getElementById('file-content').textContent = '파일을 읽는 중 오류가 발생했습니다.';
+                document.getElementById('file-content').textContent = 'ERROR';
                 console.error('Error fetching the file:', error);
             });
     </script>
