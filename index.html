@@ -17,29 +17,21 @@
         #file-content {
             font-family: Consolas, monospace;
             line-height: 0.9;
-            white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
-            width: auto; /* 콘텐츠에 맞게 너비 자동 설정 */
-            max-width: 90%; /* 부모 요소 너비의 90%로 제한 */
-            margin: 0 auto; /* 수평 중앙 정렬 */
-            overflow: hidden; /* 콘텐츠가 부모 요소를 넘지 않도록 숨기기 */
-            text-align: center; /* 텍스트 중앙 정렬 */
+            width: fit-content;
         }
         .container {
-            width: 100%; /* 부모 요소 너비를 100%로 설정 */
+            width: fit-content;
             margin: auto;
-            text-align: center; /* 텍스트를 중앙 정렬 */
+            text-align: left;
             padding: 20px;
             background: white;
-        }
-        a {
-            margin: 0 10px; /* 링크 사이 간격 추가 */
         }
     </style>
 </head>
 <body>
     <h1>Jaehyun Oh Astrophotography</h1>
     <div class="container">
-        <a href="https://www.instagram.com/jaehyun_oh_9824/">Instagram</a>
+        <a href="https://www.instagram.com/jaehyun_oh_9824/">Instagram</a></br>
         <a href="https://www.flickr.com/photos/oh-space/">Flickr</a>
         <p>Observation Data:</p>
         <pre id="file-content">Loading...</pre>
